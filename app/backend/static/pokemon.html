@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pokemon Details</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f1f1f1;
+      font-size: 18px;
+    }
+
+    .pokemon-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(60deg, #869496 0%, #1957b2 100%);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border: 4px solid goldenrod;
+    }
+
+    .pokemon-image2 {
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .pokemon-number,
+    .pokemon-name,
+    .pokemon-type,
+    .pokemon-description,
+    .pokemon-height {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <button onclick="goBack()" style="display: block; margin: 0 auto;">Go Back</button>
+
+    <div class="pokemon-details">
+      <img class="pokemon-image2" alt="Pokemon Image" src="">
+      <p class="pokemon-number"></p>
+      <p class="pokemon-name"></p>
+      <p class="pokemon-type"></p>
+      <p class="pokemon-description"></p>
+      <p class="pokemon-height"></p>
+    </div>
+  </div>
+
+  <script>
+    function getQueryParameter(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    const pokemonName = getQueryParameter('name');
+
+    fetch(`/pokemon?name=${encodeURIComponent(pokemonName)}`)
+      .then(response => response.json())
+      .then(pokemon => {
+        document.querySelector('.pokemon-image2').src = pokemon.Bild;
+        document.querySelector('.pokemon-number').textContent = `Nr: ${pokemon.Nr}`;
+        document.querySelector('.pokemon-name').textContent = pokemon.Name;
+
+        // Check if 'pokemon.Typ' is an array and join the types using ', '
+        const pokemonType = Array.isArray(pokemon.Typ) ? pokemon.Typ.join(', ') : pokemon.Typ;
+        document.querySelector('.pokemon-type').textContent = `Type: ${pokemonType}`;
+
+        document.querySelector('.pokemon-description').textContent = pokemon.Beschreibung;
+        document.querySelector('.pokemon-height').textContent = `Height: ${pokemon.Größe}`;
+      })
+      .catch(error => {
+        console.error('Error fetching Pokémon data:', error);
+        document.querySelector('.pokemon-details').textContent = 'Error fetching Pokémon data';
+      });
+
+    function goBack() {
+      history.pushState({}, '', '../');
+      window.location.reload();
+    }
+  </script>
+</body>
+
+</html>
