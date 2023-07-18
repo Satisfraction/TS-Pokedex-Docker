@@ -3,17 +3,17 @@ version: "3"
 services:
   mongodb:    # Definiert den MongoDB Service
     build:      # Definiert die Konfiguration für das Builden des Containers
-      context: ./data     # Definiert das Build Kontextverzeichnis, in dem der Dockerfile und andere Build Ressourcen liegen
+      context: ./mongodb     # Definiert das Build Kontextverzeichnis, in dem der Dockerfile und andere Build Ressourcen liegen
       dockerfile: dockerfile    # Definiert den Pfad zum Dockerfile
     container_name: mongodb       # Definiert den Namen des Containers
     ports:
       - 27017:27017              # Definiert die Ports des Containers
 
-  backend:      # Definiert den Backend Service
+  fullstack:      # Definiert den Backend Service
     build:        # Definiert die Konfiguration für das Builden des Containers
-      context: ./backend      # Definiert das Build Kontextverzeichnis, in dem der Dockerfile und andere Build Ressourcen liegen
+      context: ./fullstack      # Definiert das Build Kontextverzeichnis, in dem der Dockerfile und andere Build Ressourcen liegen
       dockerfile: dockerfile    # Definiert den Pfad zum Dockerfile
-    container_name: backend        # Definiert den Namen des Containers
+    container_name: fullstack        # Definiert den Namen des Containers
     ports:
       - 3000:3000               # Definiert die Ports des Containers
     environment:        
