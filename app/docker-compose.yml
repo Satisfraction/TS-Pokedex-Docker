@@ -1,0 +1,21 @@
+# Definiert die Version des Docker Compose Formats
+version: "3"
+services:
+  mongodb:    # Definiert den MongoDB Service
+    build:      # Definiert die Konfiguration für das Builden des Containers
+      context: ./data     # Definiert das Build Kontextverzeichnis, in dem der Dockerfile und andere Build Ressourcen liegen
+      dockerfile: dockerfile    # Definiert den Pfad zum Dockerfile
+    container_name: mongodb       # Definiert den Namen des Containers
+    ports:
+      - 27017:27017              # Definiert die Ports des Containers
+
+  backend:      # Definiert den Backend Service
+    build:        # Definiert die Konfiguration für das Builden des Containers
+      context: ./backend      # Definiert das Build Kontextverzeichnis, in dem der Dockerfile und andere Build Ressourcen liegen
+      dockerfile: dockerfile    # Definiert den Pfad zum Dockerfile
+    container_name: backend        # Definiert den Namen des Containers
+    ports:
+      - 3000:3000               # Definiert die Ports des Containers
+    environment:        
+      - MONGO_URL=mongodb://mongodb:27017/      # Definiert die Umgebungsvariable MONGO_URL mit dem Verbindungsstring zur MongoDB
+      - DATABASE_NAME=pokedex              # Definiert die Umgebungsvariable DATABASE_NAME mit dem Namen der Datenbank
