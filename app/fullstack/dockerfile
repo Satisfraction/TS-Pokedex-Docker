@@ -1,19 +1,19 @@
-# Use the official Python image as the base image
+# Verwenden Sie das offizielle Python-Image als Basisimage
 FROM python:3.9-slim
 
-# Set the working directory inside the container
+# Setzen Sie das Arbeitsverzeichnis innerhalb des Containers
 WORKDIR /app
 
-# Copy the requirements.txt file to the working directory
+# Kopieren Sie die requirements.txt-Datei in das Arbeitsverzeichnis
 COPY requirements.txt .
 
-# Install the Python dependencies
+# Installieren Sie die Python-Abhängigkeiten
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application code to the working directory
+# Kopieren Sie den restlichen Anwendungscode in das Arbeitsverzeichnis
 COPY . .
 
-# Copy the index.html file from the template folder to the working directory
+# Kopieren Sie die Dateien aus dem Vorlagenordner in das Arbeitsverzeichnis
 COPY templates/index.html .
 COPY static/pokemon.html .
 COPY static/style.css .
@@ -21,8 +21,8 @@ COPY static/script.js .
 COPY static/bilder .
 COPY static/static/bilder .
 
-# Expose the port that the Flask application will be running on
+# Geben Sie den Port frei, auf dem die Flask-Anwendung ausgeführt wird
 EXPOSE 3000
 
-# Start the Flask application
+# Starten Sie die Flask-Anwendung
 CMD ["python", "app.py"]

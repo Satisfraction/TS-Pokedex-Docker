@@ -1,15 +1,16 @@
-// Function to fetch the list of Pokemon from the server
+// Funktion zum Abrufen der Liste der Pokémon vom Server
 function fetchPokemonList() {
   fetch('/informationen')
     .then(response => response.json())
     .then(pokemonData => {
       const pokemonListContainer = document.getElementById('pokemon-list');
-      pokemonListContainer.innerHTML = ''; // Clear the container before adding Pokemon cards
+      pokemonListContainer.innerHTML = ''; // Container leeren, bevor Pokémon-Karten hinzugefügt werden
 
       pokemonData.forEach(pokemon => {
         const pokemonCard = document.createElement('div');
         pokemonCard.className = 'pokemon-card';
-        pokemonCard.dataset.name = pokemon.Name; // Store the Pokemon name as a data attribute
+        pokemonCard.dataset.name = pokemon.Name; // Pokémon-Namen als Datenattribut speichern
+        console.log(pokemon.Name);
 
         const pokemonImage = document.createElement('img');
         pokemonImage.className = 'pokemon-image';
@@ -26,7 +27,7 @@ function fetchPokemonList() {
 
         const pokemonType = document.createElement('p');
         pokemonType.className = 'pokemon-type';
-        pokemonType.textContent = `Type: ${pokemon.Typ}`;
+        pokemonType.textContent = `Typ: ${pokemon.Typ}`;
 
         const pokemonDescription = document.createElement('p');
         pokemonDescription.className = 'pokemon-description';
@@ -34,7 +35,7 @@ function fetchPokemonList() {
 
         const pokemonHeight = document.createElement('p');
         pokemonHeight.className = 'pokemon-height';
-        pokemonHeight.textContent = `Height: ${pokemon.Größe}`;
+        pokemonHeight.textContent = `Größe: ${pokemon.Größe}`;
 
         pokemonCard.appendChild(pokemonImage);
         pokemonCard.appendChild(pokemonNumber);
@@ -44,15 +45,15 @@ function fetchPokemonList() {
         pokemonCard.appendChild(pokemonHeight);
 
         pokemonCard.addEventListener('click', () => {
-          // Redirect to the pokemon.html page in the template folder with the specific Pokemon name
+          // Weiterleitung zur pokemon.html-Seite im Vorlagenordner mit dem spezifischen Pokémon-Namen
           window.location.href = `static/pokemon.html?name=${encodeURIComponent(pokemon.Name)}`;
         });
 
         pokemonListContainer.appendChild(pokemonCard);
       });
     })
-    .catch(error => console.error('Error fetching Pokemon list:', error));
+    .catch(error => console.error('Fehler beim Abrufen der Pokémon-Liste:', error));
 }
 
-// Call the fetchPokemonList function when the page loads
+// Aufruf der fetchPokemonList-Funktion, wenn die Seite geladen wird
 document.addEventListener('DOMContentLoaded', fetchPokemonList);

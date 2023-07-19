@@ -28,7 +28,7 @@ def index():
 def get_informationen():
     # Informationen aus der Datenbank abrufen
     collection = get_mongo_connection()
-    dokumente = collection.find()
+    dokumente = collection.find().sort("Nr")
 
     # Informationen in JSON-Format konvertieren und zurückgeben
     informationen = [{
@@ -44,20 +44,20 @@ def get_informationen():
 
 @app.route('/pokemon', methods=['GET'])
 def get_pokemon():
-    # Retrieve the 'name' query parameter from the request
+    # Rufen Sie den Parameter "Name" -Abfrage aus der Anforderung ab
     pokemon_name = request.args.get('name')
 
     if not pokemon_name:
         return jsonify({'error': 'Pokemon name not provided'}), 400
 
-    # Connect to the MongoDB and retrieve the Pokemon details
+    # Verbinden Sie die MongoDB und holen Sie die Pokemon -Details
     collection = get_mongo_connection()
     pokemon_data = collection.find_one({'Name': pokemon_name})
 
     if not pokemon_data:
         return jsonify({'error': 'Pokemon not found'}), 404
 
-    # Convert the Pokemon data to JSON format and return
+    # Konvertieren Sie die Pokemon -Daten in JSON -Format und geben sie aus
     pokemon_info = {
         'Nr': pokemon_data['Nr'],
         'Name': pokemon_data['Name'],
