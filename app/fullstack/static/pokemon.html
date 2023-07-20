@@ -14,6 +14,21 @@
       font-size: 18px;
     }
 
+    p {
+      display: inline;
+      color: #c64545;
+      background-image: linear-gradient(#c64545, #c64545);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 100% 100%;
+      transition: background-size 1000ms, color 700ms;
+    }
+
+    p:hover {
+      background-size: 0% 100%;
+      color: #121212;
+    }
+
     .pokemon-details {
       display: flex;
       flex-direction: column;
@@ -30,6 +45,11 @@
       height: 350px;
       object-fit: cover;
       margin-bottom: 10px;
+    }
+
+    .pokemon-image2:hover {
+      transform: scale(1.05);
+      z-index: 100;
     }
 
     .pokemon-number,
@@ -49,11 +69,11 @@
 
     <div class="pokemon-details">
       <img class="pokemon-image2" alt="Pokemon Image" src="">
-      <p class="pokemon-number"></p>
-      <p class="pokemon-name"></p>
-      <p class="pokemon-type"></p>
+      <h2 class="pokemon-number"></h2>
+      <h1 class="pokemon-name"></h1>
+      <h3 class="pokemon-type"></h3>
       <p class="pokemon-description"></p>
-      <p class="pokemon-height"></p>
+      <h3 class="pokemon-height"></h3>
     </div>
   </div>
 

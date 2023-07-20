@@ -1,58 +1,60 @@
 // Funktion zum Abrufen der Liste der Pokémon vom Server
-function fetchPokemonList() {
-  fetch('/informationen')
-    .then(response => response.json())
-    .then(pokemonData => {
-      const pokemonListContainer = document.getElementById('pokemon-list');
-      pokemonListContainer.innerHTML = ''; // Container leeren, bevor Pokémon-Karten hinzugefügt werden
+async function fetchPokemonList() {
+  try {
+    const response = await fetch('/informationen');
+    const pokemonData = await response.json();
 
-      pokemonData.forEach(pokemon => {
-        const pokemonCard = document.createElement('div');
-        pokemonCard.className = 'pokemon-card';
-        pokemonCard.dataset.name = pokemon.Name; // Pokémon-Namen als Datenattribut speichern
-        console.log(pokemon.Name);
+    const pokemonListContainer = document.getElementById('pokemon-list');
+    pokemonListContainer.innerHTML = ''; // Container leeren, bevor Pokémon-Karten hinzugefügt werden
 
-        const pokemonImage = document.createElement('img');
-        pokemonImage.className = 'pokemon-image';
-        pokemonImage.src = pokemon.Bild;
-        pokemonImage.alt = pokemon.Name;
+    pokemonData.forEach(pokemon => {
+      const pokemonCard = document.createElement('div');
+      pokemonCard.className = 'pokemon-card';
+      pokemonCard.dataset.name = pokemon.Name; // Pokémon-Namen als Datenattribut speichern
+      console.log(pokemon.Name);
 
-        const pokemonNumber = document.createElement('p');
-        pokemonNumber.className = 'pokemon-number';
-        pokemonNumber.textContent = `Nr: ${pokemon.Nr}`;
+      const pokemonImage = document.createElement('img');
+      pokemonImage.className = 'pokemon-image';
+      pokemonImage.src = pokemon.Bild;
+      pokemonImage.alt = pokemon.Name;
 
-        const pokemonName = document.createElement('p');
-        pokemonName.className = 'pokemon-name';
-        pokemonName.textContent = pokemon.Name;
+      const pokemonNumber = document.createElement('p');
+      pokemonNumber.className = 'pokemon-number';
+      pokemonNumber.textContent = `Nr: ${pokemon.Nr}`;
 
-        const pokemonType = document.createElement('p');
-        pokemonType.className = 'pokemon-type';
-        pokemonType.textContent = `Typ: ${pokemon.Typ}`;
+      const pokemonName = document.createElement('p');
+      pokemonName.className = 'pokemon-name';
+      pokemonName.textContent = pokemon.Name;
 
-        const pokemonDescription = document.createElement('p');
-        pokemonDescription.className = 'pokemon-description';
-        pokemonDescription.textContent = pokemon.Beschreibung;
+      const pokemonType = document.createElement('p');
+      pokemonType.className = 'pokemon-type';
+      pokemonType.textContent = `Typ: ${pokemon.Typ}`;
 
-        const pokemonHeight = document.createElement('p');
-        pokemonHeight.className = 'pokemon-height';
-        pokemonHeight.textContent = `Größe: ${pokemon.Größe}`;
+      const pokemonDescription = document.createElement('p');
+      pokemonDescription.className = 'pokemon-description';
+      pokemonDescription.textContent = pokemon.Beschreibung;
 
-        pokemonCard.appendChild(pokemonImage);
-        pokemonCard.appendChild(pokemonNumber);
-        pokemonCard.appendChild(pokemonName);
-        pokemonCard.appendChild(pokemonType);
-        // pokemonCard.appendChild(pokemonDescription);
-        pokemonCard.appendChild(pokemonHeight);
+      const pokemonHeight = document.createElement('p');
+      pokemonHeight.className = 'pokemon-height';
+      pokemonHeight.textContent = `Größe: ${pokemon.Größe}`;
 
-        pokemonCard.addEventListener('click', () => {
-          // Weiterleitung zur pokemon.html-Seite im Vorlagenordner mit dem spezifischen Pokémon-Namen
-          window.location.href = `static/pokemon.html?name=${encodeURIComponent(pokemon.Name)}`;
-        });
+      pokemonCard.appendChild(pokemonImage);
+      pokemonCard.appendChild(pokemonNumber);
+      pokemonCard.appendChild(pokemonName);
+      pokemonCard.appendChild(pokemonType);
+      // pokemonCard.appendChild(pokemonDescription);
+      pokemonCard.appendChild(pokemonHeight);
 
-        pokemonListContainer.appendChild(pokemonCard);
+      pokemonCard.addEventListener('click', () => {
+        // Weiterleitung zur pokemon.html-Seite im Vorlagenordner mit dem spezifischen Pokémon-Namen
+        window.location.href = `static/pokemon.html?name=${encodeURIComponent(pokemon.Name)}`;
       });
-    })
-    .catch(error => console.error('Fehler beim Abrufen der Pokémon-Liste:', error));
+
+      pokemonListContainer.appendChild(pokemonCard);
+    });
+  } catch (error) {
+    console.error('Fehler beim Abrufen der Pokémon-Liste:', error);
+  }
 }
 
 // Aufruf der fetchPokemonList-Funktion, wenn die Seite geladen wird
