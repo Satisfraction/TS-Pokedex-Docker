@@ -3,63 +3,8 @@
 
 <head>
   <title>Pokemon Details</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f1f1f1;
-      font-size: 18px;
-    }
 
-    p {
-      display: inline;
-      color: #c64545;
-      background-image: linear-gradient(#c64545, #c64545);
-      background-repeat: no-repeat;
-      background-position: right;
-      background-size: 100% 100%;
-      transition: background-size 1000ms, color 700ms;
-    }
-
-    p:hover {
-      background-size: 0% 100%;
-      color: #121212;
-    }
-
-    .pokemon-details {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: linear-gradient(60deg, #869496 0%, #1957b2 100%);
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      border: 4px solid goldenrod;
-    }
-
-    .pokemon-image2 {
-      width: 350px;
-      height: 350px;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-
-    .pokemon-image2:hover {
-      transform: scale(1.05);
-      z-index: 100;
-    }
-
-    .pokemon-number,
-    .pokemon-name,
-    .pokemon-type,
-    .pokemon-description,
-    .pokemon-height {
-      margin: 5px 0;
-    }
-  </style>
+  <link rel="stylesheet" href="pokemon.css">
 </head>
 
 <body>
@@ -68,65 +13,24 @@
     <button onclick="goBack()" style="display: block; margin: 0 auto;">Go Back</button>
 
     <div class="pokemon-details">
+      <div>
+        <h2 class="pokemon-number"></h2>
+        <h1 class="pokemon-name"></h1>
+        <h3 class="pokemon-type"></h3>
+        <h3 class="pokemon-height"></h3>
+      </div>
       <img class="pokemon-image2" alt="Pokemon Image" src="">
-      <h2 class="pokemon-number"></h2>
-      <h1 class="pokemon-name"></h1>
-      <h3 class="pokemon-type"></h3>
-      <p class="pokemon-description"></p>
-      <h3 class="pokemon-height"></h3>
     </div>
+
+    <div class="pokemon-details"><b><u>Beschreibung: </u></b>
+      <br>
+      <b><p class="pokemon-description"></p></b>
+    </div>
+    
   </div>
 
-  <script>
-    // Diese Funktion erhält den Wert eines angegebenen Query-Parameters aus der URL.
-    function getQueryParameter(name) {
-      // Erstellt eine neue Instanz von URLSearchParams und verwendet window.location.search, um die Query-Parameter aus der aktuellen URL zu erhalten.
-      const urlParams = new URLSearchParams(window.location.search);
-      // Gibt den Wert des angegebenen Query-Parameters zurück.
-      return urlParams.get(name);
-    }
-
-    // Ruft den Wert des Query-Parameters 'name' über die getQueryParameter-Funktion ab und speichert ihn in der Variable pokemonName.
-    const pokemonName = getQueryParameter('name');
-
-    // Sendet eine GET-Anfrage an die API-Endpunkt '/pokemon' mit dem Query-Parameter 'name' als Teil der URL.
-    fetch(`/pokemon?name=${encodeURIComponent(pokemonName)}`)
-      // Verarbeitet die Antwort der GET-Anfrage als JSON.
-      .then(response => response.json())
-      // Verarbeitet die JSON-Daten des Pokémons.
-      .then(pokemon => {
-        // Aktualisiert das Bild des Pokémons.
-        document.querySelector('.pokemon-image2').src = pokemon.Bild;
-        // Aktualisiert die Nummer des Pokémons.
-        document.querySelector('.pokemon-number').textContent = `Nr: ${pokemon.Nr}`;
-        // Aktualisiert den Namen des Pokémons.
-        document.querySelector('.pokemon-name').textContent = pokemon.Name;
-
-        // Überprüft, ob 'pokemon.Typ' ein Array ist und die Typen mit ', ' verbindet.
-        const pokemonType = Array.isArray(pokemon.Typ) ? pokemon.Typ.join(', ') : pokemon.Typ;
-        // Aktualisiert den Typ des Pokémons.
-        document.querySelector('.pokemon-type').textContent = `Typ: ${pokemonType}`;
-
-        // Aktualisiert die Beschreibung des Pokémons.
-        document.querySelector('.pokemon-description').textContent = pokemon.Beschreibung;
-        // Aktualisiert die Größe des Pokémons.
-        document.querySelector('.pokemon-height').textContent = `Höhe: ${pokemon.Größe}`;
-      })
-      // Behandelt Fehler beim Abrufen der Pokémon-Daten.
-      .catch(error => {
-        console.error('Fehler beim Abrufen der Pokémon-Daten:', error);
-        // Zeigt eine Fehlermeldung an.
-        document.querySelector('.pokemon-details').textContent = 'Fehler beim Abrufen der Pokémon-Daten';
-      });
-
-    // Diese Funktion navigiert zurück zur vorherigen Seite.
-    function goBack() {
-      // Fügt einen leeren State hinzu und aktualisiert die URL auf den übergeordneten Ordner.
-      history.pushState({}, '', '../');
-      // Lädt die Seite neu.
-      window.location.reload();
-    }
-  </script>
+  <script src="pokemon.js"></script>
+  
 </body>
 
 </html>

@@ -2,15 +2,19 @@
   {
     "Nr": "000",
     "Name": "Poke Center",
-    "Typ": "Gebäude",
+    "Typ": [
+      "Gebaeude"
+    ],
     "Beschreibung": "Ein Pokémon-Center ist ein Gebäude, in dem verschiedene Dienstleistungen für Pokémon-Trainer angeboten werden. Sie dienen hauptsächlich dazu, die Kraftpunkte (KP) und Angriffspunkte (AP) der Pokémon im Team aufzufüllen sowie Statusveränderungen zu heilen. Dieser Service ist in allen Pokémon-Centern der verschiedenen Generationen kostenlos",
-    "Größe": "3.0 m",
+    "Größe": "30 m",
     "Bild": "static/bilder/pokemon-center.png"
   },
   {
     "Nr": "000-1",
     "Name": "Professor Eich",
-    "Typ": "Mensch",
+    "Typ": [
+      "Mensch"
+    ],
     "Beschreibung": "Professor Samuel Eich ist ein renommierter Pokémon-Professor und wohnt in Alabastia. Er ist eine Koryphäe auf dem Gebiet der Pokémon und hat sogar mitgeholfen, den Pokédex zu entwickeln1. Er ist wahrscheinlich der berühmteste Pokémon-Forscher, den die Pokéwelt je gesehen hat.",
     "Größe": "1.82 m",
     "Bild": "static/bilder/eich.jpg"
@@ -18,7 +22,10 @@
   {
     "Nr": "001",
     "Name": "Bisasam",
-    "Typ": "Pflanze/Gift",
+    "Typ": [
+      "Pflanze",
+      "Gift"
+    ],
     "Beschreibung": "Bisasam nimmt waehrend der Entwicklung Energie aus seiner Umgebung auf. Die Knospe auf seinem Ruecken wird Größer und entwickelt sich zu einem Bluetenstand.",
     "Größe": "0.7 m",
     "Bild": "static/bilder/Bisasam.png"
@@ -26,7 +33,10 @@
   {
     "Nr": "002",
     "Name": "Bisaknosp",
-    "Typ": "Pflanze/Gift",
+    "Typ": [
+      "Pflanze",
+      "Gift"
+    ],
     "Beschreibung": "Bisaknosp besitzt einen großen Bluetenstand auf seinem Ruecken. In diesem Bluetenstand befinden sich Pflanzen, die das Pokémon mit Naehrstoffen versorgen.",
     "Größe": "1.0 m",
     "Bild": "static/bilder/Bisaknosp.png"
@@ -34,7 +44,10 @@
   {
     "Nr": "003",
     "Name": "Bisaflor",
-    "Typ": "Pflanze/Gift",
+    "Typ": [
+      "Pflanze",
+      "Gift"
+    ],
     "Beschreibung": "Bisaflor sammelt Sonnenlicht mit seinen Bluetenblaettern und wandelt es in Energie um. Es ist in der Lage, einen starken Duft zu verstroemen, um Feinde abzuschrecken.",
     "Größe": "2.0 m",
     "Bild": "static/bilder/Bisaflor.png"
@@ -42,7 +55,9 @@
   {
     "Nr": "004",
     "Name": "Glumanda",
-    "Typ": "Feuer",
+    "Typ": [
+      "Feuer"
+    ],
     "Beschreibung": "Glumanda speichert Flammen in seinem Bauch, die als Indikator fuer seine Gesundheit dienen. Es ist aeußerst selten in freier Wildbahn anzutreffen.",
     "Größe": "0.6 m",
     "Bild": "static/bilder/Glumanda.png"
@@ -50,7 +65,9 @@
   {
     "Nr": "005",
     "Name": "Glutexo",
-    "Typ": "Feuer",
+    "Typ": [
+      "Feuer"
+    ],
     "Beschreibung": "Glutexo hat ein starkes Feuer in seinem Inneren, das von Tag zu Tag Größer wird. Es wird schnell wuetend und ist ein hartnaeckiger Kaempfer.",
     "Größe": "1.1 m",
     "Bild": "static/bilder/Glutexo.png"
@@ -58,7 +75,10 @@
   {
     "Nr": "006",
     "Name": "Glurak",
-    "Typ": "Feuer/Flug",
+    "Typ": [
+      "Feuer",
+      "Flug"
+    ],
     "Beschreibung": "Glurak ist ein gefaehrliches und beeindruckendes Pokémon. Mit seinen maechtigen Fluegeln kann es Feuerbaelle erzeugen, die ganze Landschaften in Brand setzen koennen.",
     "Größe": "1.7 m",
     "Bild": "static/bilder/Glurak.png"
@@ -66,7 +86,9 @@
   {
     "Nr": "007",
     "Name": "Schiggy",
-    "Typ": "Wasser",
+    "Typ": [
+      "Wasser"
+    ],
     "Beschreibung": "Schiggy ist ein kleines und sueßes Pokémon, das eine harte Schale traegt. Es kann in Gewaessern leben und mit seinen Flossen schnell schwimmen.",
     "Größe": "0.5 m",
     "Bild": "static/bilder/Schiggy.png"
@@ -74,7 +96,9 @@
   {
     "Nr": "008",
     "Name": "Schillok",
-    "Typ": "Wasser",
+    "Typ": [
+      "Wasser"
+    ],
     "Beschreibung": "Schillok ist das entwickelte Form von Schiggy. Sein Panzer hat sich verGrößert und bietet besseren Schutz. Es kann seine Schwimmfaehigkeiten weiter verbessern.",
     "Größe": "1.0 m",
     "Bild": "static/bilder/Schillok.png"
@@ -82,7 +106,9 @@
   {
     "Nr": "009",
     "Name": "Turtok",
-    "Typ": "Wasser",
+    "Typ": [
+      "Wasser"
+    ],
     "Beschreibung": "Turtok ist die finale Entwicklungsstufe von Schiggy. Mit seinem gewaltigen Panzer und seinen starken Schwimmfaehigkeiten kann es sich selbst vor den staerksten Angriffen schuetzen.",
     "Größe": "1.6 m",
     "Bild": "static/bilder/Turtok.png"
@@ -90,7 +116,9 @@
   {
     "Nr": "010",
     "Name": "Raupy",
-    "Typ": "Kaefer",
+    "Typ": [
+      "Kaefer"
+    ],
     "Beschreibung": "Raupy besitzt einen starken Appetit und frisst staendig Blaetter. Es ist schwach und vorsichtig, sodass es bei Gefahr seinen Koerper mit einem Seidenfaden schuetzt.",
     "Größe": "0.3 m",
     "Bild": "static/bilder/Raupy.png"
@@ -98,7 +126,9 @@
   {
     "Nr": "011",
     "Name": "Safcon",
-    "Typ": "Kaefer",
+    "Typ": [
+      "Kaefer"
+    ],
     "Beschreibung": "Safcon hat einen schuetzenden Kokon um seinen Koerper gewebt. Es bleibt in diesem Kokon verborgen und entwickelt sich langsam weiter.",
     "Größe": "0.7 m",
     "Bild": "static/bilder/Safcon.png"
@@ -106,7 +136,10 @@
   {
     "Nr": "012",
     "Name": "Smettbo",
-    "Typ": "Kaefer/Flug",
+    "Typ": [
+      "Kaefer",
+      "Flug"
+    ],
     "Beschreibung": "Smettbo ist das entwickelte Form von Safcon. Es hat zarte Fluegel und ist ein geschickter Flieger. Es saugt Nektar aus Blumen, um seine Kraefte wiederherzustellen.",
     "Größe": "1.0 m",
     "Bild": "static/bilder/Smettbo.png"
@@ -114,7 +147,10 @@
   {
     "Nr": "013",
     "Name": "Hornliu",
-    "Typ": "Kaefer/Gift",
+    "Typ": [
+      "Kaefer",
+      "Gift"
+    ],
     "Beschreibung": "Hornliu besitzt einen giftigen Stachel auf seinem Kopf. Es nutzt seinen Stachel zum Schutz vor Feinden und zur Verteidigung.",
     "Größe": "0.3 m",
     "Bild": "static/bilder/Hornliu.png"
@@ -122,7 +158,10 @@
   {
     "Nr": "014",
     "Name": "Kokuna",
-    "Typ": "Kaefer/Gift",
+    "Typ": [
+      "Kaefer",
+      "Gift"
+    ],
     "Beschreibung": "Kokuna hat sich in einen dicken Kokon eingewebt. Waehrend dieser Phase findet keine Entwicklung statt, es wartet nur auf den richtigen Zeitpunkt, um sich weiterzuentwickeln.",
     "Größe": "0.6 m",
     "Bild": "static/bilder/Kokuna.png"
@@ -130,7 +169,10 @@
   {
     "Nr": "015",
     "Name": "Bibor",
-    "Typ": "Kaefer/Gift",
+    "Typ": [
+      "Kaefer",
+      "Gift"
+    ],
     "Beschreibung": "Bibor ist das entwickelte Form von Hornliu. Es hat scharfe Klingen an seinen Armen und kann mit seinen Giftstacheln toedliche Angriffe durchfuehren.",
     "Größe": "1.5 m",
     "Bild": "static/bilder/Bibor.png"
@@ -138,7 +180,10 @@
   {
     "Nr": "016",
     "Name": "Taubsi",
-    "Typ": "Normal/Flug",
+    "Typ": [
+      "Normal",
+      "Flug"
+    ],
     "Beschreibung": "Taubsi hat einen ausgezeichneten Orientierungssinn und kann immer den Weg nach Hause finden, selbst ueber weite Entfernungen. Es ist ein haeufiges Pokémon.",
     "Größe": "0.3 m",
     "Bild": "static/bilder/Taubsi.png"
@@ -146,7 +191,10 @@
   {
     "Nr": "017",
     "Name": "Tauboga",
-    "Typ": "Normal/Flug",
+    "Typ": [
+      "Normal",
+      "Flug"
+    ],
     "Beschreibung": "Tauboga ist das entwickelte Form von Taubsi. Es hat eine Größere Fluegelspannweite und kann laengere Strecken fliegen. Es gilt als treuer Begleiter.",
     "Größe": "1.2 m",
     "Bild": "static/bilder/Tauboga.png"
@@ -154,7 +202,10 @@
   {
     "Nr": "018",
     "Name": "Tauboss",
-    "Typ": "Normal/Flug",
+    "Typ": [
+      "Normal",
+      "Flug"
+    ],
     "Beschreibung": "Tauboss ist die finale Entwicklungsstufe von Taubsi. Es hat einen majestaetischen Flug und kann hohe Geschwindigkeiten erreichen. Es verteidigt sein Territorium energisch.",
     "Größe": "1.6 m",
     "Bild": "static/bilder/Tauboss.png"
@@ -162,7 +213,9 @@
   {
     "Nr": "019",
     "Name": "Rattfratz",
-    "Typ": "Normal",
+    "Typ": [
+      "Normal"
+    ],
     "Beschreibung": "Rattfratz hat große Vorderzaehne, mit denen es alles anknabbern kann. Es ist nachtaktiv und sucht in der Dunkelheit nach Nahrung.",
     "Größe": "0.3 m",
     "Bild": "static/bilder/Rattfratz.png"
@@ -170,7 +223,9 @@
   {
     "Nr": "020",
     "Name": "Rattikarl",
-    "Typ": "Normal",
+    "Typ": [
+      "Normal"
+    ],
     "Beschreibung": "Rattikarl ist das entwickelte Form von Rattfratz. Es hat scharfe Zaehne und kann damit muehelos durch harte Gegenstaende beißen. Es ist ein geschickter Jaeger.",
     "Größe": "0.7 m",
     "Bild": "static/bilder/Rattikarl.png"
@@ -276,5 +331,87 @@
     "Beschreibung": "Nidorina ist ein sanftmuetiges Pokémon. Sie entwickelt sich weiter, wenn sie einen Mondstein traegt und wird zu einer staerkeren Nidoqueen.",
     "Größe": "0,8 m",
     "Bild": "static/bilder/Nidorina.png"
+  },
+  {
+    "Nr": "031",
+    "Name": "Nidoqueen",
+    "Typ": [
+      "Gift",
+      "Boden"
+    ],
+    "Beschreibung": "Nidoqueen ist ein staerkeres Nidorina. Es entwickelt sich weiter, wenn sie einen Mondstein traegt und wird zu einer staerkeren Nidorina.",
+    "Größe": "1,5 m",
+    "Bild": "static/bilder/Nidoqueen.png"
+  },
+  {
+    "Nr": "032",
+    "Name": "Nidoran (maennlich)",
+    "Typ": [
+      "Gift"
+    ],
+    "Beschreibung": "Nidoran (maennlich) hat scharfe Giftstacheln auf seinem Ruecken. Sie sind vorsichtig und scheu, aber koennen auch mutig sein, wenn sie ihr Territorium verteidigen.",
+    "Größe": "0,5 m",
+    "Bild": "static/bilder/NidoranM.png"
+  },
+  {
+    "Nr": "033",
+    "Name": "Nidorino",
+    "Typ": [
+      "Gift"
+    ],
+    "Beschreibung": "Auf der Suche nach einem Mondstein zerstört es Felsen mit seinem Horn, das härter ist als ein Diamant.",
+    "Größe": "0,9 m",
+    "Bild": "static/bilder/Nidorino.png"
+  },
+  {
+    "Nr": "034",
+    "Name": "Nidoking",
+    "Typ": [
+      "Gift",
+      "Boden"
+    ],
+    "Beschreibung": "Gerät es in Rage, ist es nur schwer aufzuhalten. Doch vor einem Nidoqueen, mit dem es schon viele Jahre verbracht hat, zeigt es sich friedlich.",
+    "Größe": "1,6 m",
+    "Bild": "static/bilder/Nidoking.png"
+  },
+  {
+    "Nr": "035",
+    "Name": "Piepi",
+    "Typ": [
+      "Fee"
+    ],
+    "Beschreibung": "Eine Ansammlung von Piepi bei Vollmond tanzen zu sehen, soll ein glückliches Leben verheißen.",
+    "Größe": "0,6 m",
+    "Bild": "static/bilder/Piepi.png"
+  },
+  {
+    "Nr": "036",
+    "Name": "Pixi",
+    "Typ": [
+      "Fee"
+    ],
+    "Beschreibung": "Ein feenhaftes und scheues Pokémon, das sofort die Flucht ergreift, wenn es Menschen wahrnimmt.",
+    "Größe": "1,3 m",
+    "Bild": "static/bilder/Pixi.png"
+  },
+  {
+    "Nr": "037",
+    "Name": "Vulpix",
+    "Typ": [
+      "Feuer"
+    ],
+    "Beschreibung": "In seiner Jugend hat es sechs hinreißende Schweife. Während es wächst, kommen noch weitere neue Schweife hinzu.",
+    "Größe": "0,6 m",
+    "Bild": "static/bilder/Vulpix.png"
+  },
+  {
+    "Nr": "038",
+    "Name": "Vulnona",
+    "Typ": [
+      "Feuer"
+    ],
+    "Beschreibung": "Man sagt, es lebe 1 000 Jahre und jedem seiner Schweife wohnen übernatürliche Kräfte inne.",
+    "Größe": "1,1 m",
+    "Bild": "static/bilder/Vulnona.png"
   }
 ]

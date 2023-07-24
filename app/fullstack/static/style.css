@@ -6,14 +6,30 @@
   padding: 25px;
 }
 
+.container:hover .pokemon-card {
+  filter: blur(3px);               
+  opacity: .5;                    
+  transform: scale(.98);             
+  box-shadow: none;                
+}
+
+.container:hover .pokemon-card:hover {
+  filter: blur(0);                  
+  opacity: 1;                        
+  transform: scale(1);               
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);       
+  background: linear-gradient(60deg, #c13121 0%, #1d2229 100%);                
+  color: white;                    
+}
+
 .pokemon-card {
   position: relative;
   width: 300px;
   height: 400px;
-  padding: 20px;
+  padding: 10px;
   background: linear-gradient(60deg, #ababfd 0%, #1d2229 100%);
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -32,10 +48,14 @@
   margin: 0 auto 20px;
   border-radius: 50%;
   object-fit: cover;
+  filter: grayscale(100%);
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .pokemon-image:hover {
   transform: scale(1.2);
+  filter: grayscale(0%);
 }
 
 .pokemon-number {
