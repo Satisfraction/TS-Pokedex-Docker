@@ -413,5 +413,188 @@
     "Beschreibung": "Man sagt, es lebe 1 000 Jahre und jedem seiner Schweife wohnen übernatürliche Kräfte inne.",
     "Größe": "1,1 m",
     "Bild": "static/bilder/Vulnona.png"
+  },
+  {
+    "Nr": "039",
+    "Name": "Pummeluff",
+    "Typ": [
+      "Normal",
+      "Fee"
+    ],
+    "Beschreibung": "Wenn seine Kulleraugen zu flackern beginnen, singt es ein mysteriöses, wohlklingendes Lied, das Zuhörer in Schlaf versetzt.",
+    "Größe": "0,5 m",
+    "Bild": "static/bilder/Pummeluff.png"
+  },
+  {
+    "Nr": "040",
+    "Name": "Knuddeluff",
+    "Typ": [
+      "Normal",
+      "Fee"
+    ],
+    "Beschreibung": "Es hat sehr feines Fell. Doch Vorsicht: Verärgert man Knuddeluff, bläst es sich stark auf und stürzt sich mit seinem ganzen Körper auf einen.",
+    "Größe": "1,0 m",
+    "Bild": "static/bilder/Knuddeluff.png"
+  },
+  {
+    "Nr": "041",
+    "Name": "Zubat",
+    "Typ": [
+      "Gift",
+      "Flug"
+    ],
+    "Beschreibung": "Über den Mund stößt es Ultraschallwellen aus, um seine Umgebung zu erkunden. So kann es selbst in engen Höhlen geschickt umherfliegen.",
+    "Größe": "0,8 m",
+    "Bild": "static/bilder/Zubat.png"
+  },
+  {
+    "Nr": "042",
+    "Name": "Golbat",
+    "Typ": [
+      "Gift",
+      "Flug"
+    ],
+    "Beschreibung": "Das Blut anderer Lebewesen ist seine Leibspeise. Man sagt, dass es das abgesaugte Blut manchmal mit hungrigen Artgenossen teilt.",
+    "Größe": "1,6 m",
+    "Bild": "static/bilder/Golbat.png"
+  },
+  {
+    "Nr": "043",
+    "Name": "Myrapla",
+    "Typ": [
+      "Pflanze",
+      "Gift"
+    ],
+    "Beschreibung": "Wird es vom Mondschein getroffen, bewegt es sich. Nachts wandert es weite Wege, um seine Samen zu verstreuen.",
+    "Größe": "0,5 m",
+    "Bild": "static/bilder/Myrapla.png"
+  },
+  {
+    "Nr": "044",
+    "Name": "Duflor",
+    "Typ": [
+      "Pflanze",
+      "Gift"
+    ],
+    "Beschreibung": "Sein Stempel sondert einen unglaublich faulen Gestank ab. Dieser stechende Geruch kann selbst bis zu 2 km entfernte Gegner bewusstlos machen.",
+    "Größe": "0,8 m",
+    "Bild": "static/bilder/Duflor.png"
+  },
+  {
+    "Nr": "045",
+    "Name": "Giflor",
+    "Typ": [
+      "Pflanze",
+      "Gift"
+    ],
+    "Beschreibung": "Es besitzt die größten Blütenblätter der Welt. Bei jedem Schritt streut es große Mengen an Giftpollen zu Boden.",
+    "Größe": "1,2 m",
+    "Bild": "static/bilder/Giflor.png"
+  },
+  {
+    "Nr": "046",
+    "Name": "Paras",
+    "Typ": [
+      "Kaefer",
+      "Pflanze"
+    ],
+    "Beschreibung": "Es gräbt sich in den Boden, um Baumwurzeln Nährstoffe zu entziehen. Den Großteil davon absorbieren jedoch die Pilze auf seinem Rücken.",
+    "Größe": "0,3 m",
+    "Bild": "static/bilder/Paras.png"
+  },
+  {
+    "Nr": "047",
+    "Name": "Parasek",
+    "Typ": [
+      "Kaefer",
+      "Pflanze"
+    ],
+    "Beschreibung": "Der Pilz auf Paraseks Rücken nutzt das Pokémon als Wirt und entzieht ihm Energie. Es scheint, als habe er die Kontrolle über das Pokémon.",
+    "Größe": "1,0 m",
+    "Bild": "static/bilder/Parasek.png"
+  },
+  {
+    "Nr": "048",
+    "Name": "Bluzuk",
+    "Typ": [
+      "Kaefer",
+      "Gift"
+    ],
+    "Beschreibung": "Aus seinem ganzen Körper tritt Gift aus. Es fängt und frisst nachts kleine Käfer-Pokémon, die von Licht angelockt wurden.",
+    "Größe": "1,0 m",
+    "Bild": "static/bilder/Bluzuk.png"
+  },
+  {
+    "Nr": "049",
+    "Name": "Omot",
+    "Typ": [
+      "Kaefer",
+      "Gift"
+    ],
+    "Beschreibung": "Seine Flügel sind mit staubähnlichen Schuppen überzogen. Mit jedem Flügelschlag verstreut es hochgiftigen Puder.",
+    "Größe": "1,5 m",
+    "Bild": "static/bilder/Omot.png"
+  },
+  {
+    "Nr": "050",
+    "Name": "Digda",
+    "Typ": [
+      "Boden"
+    ],
+    "Beschreibung": "Dieses Pokémon lebt 1 m unter der Erde. Es frisst Wurzeln und kommt hin und wieder an die Oberfläche.",
+    "Größe": "0,2 m",
+    "Bild": "static/bilder/Digda.png"
+  },
+  {
+    "Nr": "051",
+    "Name": "Digdri",
+    "Typ": [
+      "Boden"
+    ],
+    "Beschreibung": "Seine drei Köpfe bewegen sich abwechselnd hinauf und hinunter, um das Erdreich um sich herum zu lockern und leichter graben zu können.",
+    "Größe": "0,7 m",
+    "Bild": "static/bilder/Digdri.png"
+  },
+  {
+    "Nr": "052",
+    "Name": "Mauzi",
+    "Typ": [
+      "Normal"
+    ],
+    "Beschreibung": "Es schläft den ganzen Tag. Nachts patrouilliert es sein Revier mit glühenden Augen.",
+    "Größe": "0,4 m",
+    "Bild": "static/bilder/Mauzi.png"
+  },
+  {
+    "Nr": "053",
+    "Name": "Snobilikat",
+    "Typ": [
+      "Normal"
+    ],
+    "Beschreibung": "Aufgrund seines schönen Fells wollen viele ein Snobilikat im Haus haben. Es ist jedoch schwer erziehbar, da es sehr schnell kratzt.",
+    "Größe": "1,0 m",
+    "Bild": "static/bilder/Snobilikat.png"
+  },
+  {
+    "Nr": "054",
+    "Name": "Enton",
+    "Typ": [
+      "Wasser",
+      "Psycho"
+    ],
+    "Beschreibung": "Es wird permanent von Kopfschmerzen geplagt. Wird der Schmerz stärker, setzt es geheimnisvolle Kräfte ein.",
+    "Größe": "0,8 m",
+    "Bild": "static/bilder/Enton.png"
+  },
+  {
+    "Nr": "055",
+    "Name": "Entoron",
+    "Typ": [
+      "Wasser",
+      "Psycho"
+    ],
+    "Beschreibung": "Wenn es mit den Schwimmflossen an seinen langen Gliedmaßen schnell durchs Wasser schwimmt, beginnt seine Stirn zu glühen.",
+    "Größe": "1,7 m",
+    "Bild": "static/bilder/Entoron.png"
   }
 ]
