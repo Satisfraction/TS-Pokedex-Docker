@@ -78,5 +78,6 @@ p:hover {
 .Boden { background-color: rgb(130, 43, 43); color: #fff; }
 .Pflanze { background-color: rgb(6, 73, 6); color: #fff; }
 .Gebaeude { background-color: rgb(170, 162, 162); }
-.Feuer { background-color: red; color: #fff; }
-.Wasser { background-color: blue; color: #fff; }
+.Feuer { background-color: rgb(226, 17, 17); color: #fff; }
+.Wasser { background-color: rgb(21, 21, 218); color: #fff; }
+.Psycho { background-color: rgb(108, 67, 155); color: #fff; }
